@@ -37,7 +37,7 @@ export default function AssetsPage() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-          <div className="rounded-xl bg-muted/50 p-6">
+          <div className="rounded-xl bg-muted/50 p-4">
             <h2 className="mb-6 text-2xl font-bold">Lista de Criptomoedas</h2>
             <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
               {cryptoAssets.map((asset) => (
