@@ -66,10 +66,10 @@ export default function AssetsPage() {
                   </div>
                   <div className="ml-auto text-right">
                     <div className="font-medium">
-                      ${asset.price.toLocaleString()}
+                      ${Number(asset.price).toFixed(2)}
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      Market Cap: ${asset.marketCap.toLocaleString()}
+                      Market Cap: ${formatMarketCap(asset.marketCap)}
                     </div>
                   </div>
                 </div>
@@ -132,3 +132,13 @@ const cryptoAssets = [
     change: 4.56,
   },
 ];
+
+function formatMarketCap(value: number): string {
+  if (value >= 1000000000) {
+    return `${(value / 1000000000).toFixed(1)}B`;
+  } else if (value >= 1000000) {
+    return `${(value / 1000000).toFixed(1)}M`;
+  } else {
+    return value.toFixed(0);
+  }
+}
