@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Orbt: Exchange de Criptomoedas Rápida e Segura",
-  description: "Troque e negocie criptomoedas com facilidade e segurança na Orbt.",
+  title: "Orbt: Compre e venda Criptomoedas com facilidade e segurança",
+  description:
+    "Orbt é uma plataforma de compra e venda de criptomoedas com uma interface intuitiva e segura. Compre e venda Bitcoin, Ethereum e outras criptomoedas com facilidade e segurança.",
 };
 
 export default function RootLayout({
@@ -26,10 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta property="og:image" content="/thumbnail.jpg" />
-        <meta property="og:image:alt" content="Descrição da imagem" />
-        <meta property="og:title" content="Orbt: Compre Criptomoedas Rápido e Fácil" />
-        <meta property="og:description" content="Troque e negocie criptomoedas com facilidade e segurança na Orbt." />
-        {/* Add other relevant Open Graph tags as needed */}
+        <meta property="og:image:alt" content="Orbt: Compre e venda Criptomoedas com facilidade e segurança" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
