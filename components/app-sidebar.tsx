@@ -2,14 +2,7 @@
 
 import * as React from "react";
 import {
-  BookOpen,
-  Bot,
-  Command,
-  Globe,
-  Frame,
   LifeBuoy,
-  Map,
-  PieChart,
   Send,
   Settings2,
   SquareTerminal,
@@ -18,7 +11,6 @@ import {
 import { usePathname } from "next/navigation";
 
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
 import { NavSecondary } from "@/components/nav-secondary";
 import { NavUser } from "@/components/nav-user";
 import {
@@ -109,9 +101,9 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname();
 
-  const navMain = data.navMain.map(item => ({
+  const navMain = data.navMain.map((item) => ({
     ...item,
-    isActive: item.url === "#" ? item.isActive : pathname === item.url
+    isActive: item.url === "#" ? item.isActive : pathname === item.url,
   }));
 
   return (
